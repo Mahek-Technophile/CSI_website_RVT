@@ -22,17 +22,15 @@ export const Home = (): JSX.Element => {
       <Header />
 
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-8 md:py-12">
-        {/* Logo/Background Image */}
-        <div className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] mb-6 md:mb-8">
-          <img
-            className="w-full h-full object-cover"
-            alt="CSI Logo"
-            src="/background-image.png"
-          />
-        </div>
+        {/* Watermark Logo - positioned behind text */}
+        <img
+          className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 -rotate-90 z-0"
+          alt="CSI Watermark"
+          src="/image.png"
+        />
 
         {/* Hero Text */}
-        <div className="flex flex-col items-center justify-center gap-3 md:gap-4 max-w-6xl">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-3 md:gap-4 max-w-6xl">
           <h1 className="font-['Outfit',sans-serif] font-normal text-center tracking-[0] leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-[91.5px]">
             <span className="font-semibold text-[#3771c8]">Welcome</span>
             <span className="font-semibold text-[#eeedef]"> To</span>
